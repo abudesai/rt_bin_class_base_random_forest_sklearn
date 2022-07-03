@@ -1,0 +1,8 @@
+model,dataset_name,run_hpt,num_hpt_trials,accuracy,f1_score,precision,recall,auc_score,elapsed_time_in_minutes
+binary_class_random_forest,cancer,True,20,0.9649,0.9583,0.9583,0.9583,0.964,0.13
+binary_class_random_forest,credit_card,True,20,1.0,1.0,1.0,1.0,1.0,0.12
+binary_class_random_forest,mushroom,True,20,1.0,1.0,1.0,1.0,1.0,0.22
+binary_class_random_forest,segment,True,20,1.0,1.0,1.0,1.0,1.0,0.25
+binary_class_random_forest,spam,True,20,0.9567,0.949,0.93,0.9688,0.9584,0.4
+binary_class_random_forest,telco_churn,True,20,0.7195,0.5561,0.4306,0.7848,0.7428,0.46
+binary_class_random_forest,titanic,True,20,0.7667,0.7273,0.6829,0.7778,0.7685,0.11
