@@ -10,17 +10,7 @@ warnings.filterwarnings('ignore')
 from sklearn.ensemble import RandomForestClassifier
 
 model_fname = "model.save"
-MODEL_NAME = "RandomForest_sklearn"
-
-COST_THRESHOLD = float('inf')
-
-
-# class InfCostStopCallback(Callback):
-#     def on_epoch_end(self, epoch, logs={}):
-#         loss_val = logs.get('loss')
-#         if(loss_val == COST_THRESHOLD or tf.math.is_nan(loss_val)):
-#             print("Cost is inf, so stopping training!!")
-#             self.model.stop_training = True
+MODEL_NAME = "bin_class_random_forest_sklearn"
 
 
 class RandomForest_sklearn(): 
