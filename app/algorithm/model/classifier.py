@@ -10,10 +10,10 @@ warnings.filterwarnings('ignore')
 from sklearn.ensemble import RandomForestClassifier
 
 model_fname = "model.save"
-MODEL_NAME = "bin_class_random_forest_sklearn"
+MODEL_NAME = "bin_class_base_random_forest_sklearn"
 
 
-class RandomForest_sklearn(): 
+class Classifier(): 
     
     def __init__(self, n_estimators = 100, min_samples_split = 2, min_samples_leaf = 1, **kwargs) -> None:
         self.n_estimators = int(n_estimators)
@@ -33,6 +33,11 @@ class RandomForest_sklearn():
     
     def predict(self, X, verbose=False): 
         preds = self.model.predict(X)
+        return preds          
+        
+    
+    def predict_proba(self, X, verbose=False): 
+        preds = self.model.predict_proba(X)
         return preds 
     
 
@@ -47,7 +52,7 @@ class RandomForest_sklearn():
 
     
     def save(self, model_path): 
-        joblib.dump(self.model, os.path.join(model_path, model_fname))
+        joblib.dump(self, os.path.join(model_path, model_fname))
         
 
 
