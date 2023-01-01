@@ -36,7 +36,9 @@ class TypeCaster(BaseEstimator, TransformerMixin):
         data = data.copy()
         applied_cols = [col for col in self.vars if col in data.columns] 
         for var in applied_cols: 
+            data[var] = data[var].fillna("__dummy__")
             data[var] = data[var].apply(self.cast_type)
+            data[var] = data[var].replace("__dummy__", np.nan)
         return data
 
 
