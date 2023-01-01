@@ -90,7 +90,6 @@ class ModelServer:
             }
             predictions_response.append(pred_obj)
         
-        print("predictions_response", predictions_response)
         return predictions_response
     
         
